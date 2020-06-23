@@ -1,0 +1,150 @@
+﻿@model MockUp.Models.Customer
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2 class="text-center">Create Customer</h2>
+
+<head>
+
+    <script src="~/jquery.js"></script>
+    <script src="~/script.js"></script>
+    <link href="~/styles.css" rel="stylesheet" />
+    <link href="~/Content/Site.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/themes/base/jquery-ui.min.css" rel="stylesheet" />
+    <script src="~/Scripts/modernizr-2.8.3.js"></script>
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+    <link href="~/Content/themes/base/jquery-ui.css" rel="stylesheet" />
+    <script src="~/Scripts/jquery-ui-1.12.1.js"></script>
+    <script src="~/DatePickerReady.js"></script>
+
+
+
+</head>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+<body>
+    <h4 class="text-left">Logged In as: Jane Doe</h4>
+
+    <div class="form-horizontal">
+        <div class="wrapper" style="padding-bottom: 2%; margin-bottom: 2%">
+            <div class="listing" style="padding-left: 5%; padding-right: 5%">
+                <hr />
+                <div class="col-md-offset-1">
+                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+                    @Html.LabelFor(model => model.FirstName, htmlAttributes: new { @class = "control-label col-sm" })
+
+                    @Html.EditorFor(model => model.FirstName, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.FirstName, "", new { @class = "text-danger" })<br />
+
+                    @Html.LabelFor(model => model.MiddleName, htmlAttributes: new { @class = "control-label col-sm" })
+
+                    @Html.EditorFor(model => model.MiddleName, new { htmlAttributes = new { @class = "form-control", placeholder = "*Optional" } })
+                    @Html.ValidationMessageFor(model => model.MiddleName, "", new { @class = "text-danger" })<br />
+
+                    @Html.LabelFor(model => model.LastName, htmlAttributes: new { @class = "control-label col-sm" })
+
+                    @Html.EditorFor(model => model.LastName, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.LastName, "", new { @class = "text-danger" })<br />
+
+
+                    @Html.LabelFor(model => model.BirthDay, htmlAttributes: new { @class = "control-label col-sm" })
+
+                    @Html.EditorFor(model => model.BirthDay, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.BirthDay, "", new { @class = "text-danger" })<br />
+
+                    @Html.LabelFor(model => model.HomePhone, htmlAttributes: new { @class = "control-label col-sm" })
+
+                    @Html.EditorFor(model => model.HomePhone, new { htmlAttributes = new { @class = "form-control", placeholder= "*Optional" } })
+                    @Html.ValidationMessageFor(model => model.HomePhone, "", new { @class = "text-danger" })<br />
+
+
+
+                    @Html.LabelFor(model => model.CellPhone, htmlAttributes: new { @class = "control-label col-sm" })
+
+                    @Html.EditorFor(model => model.CellPhone, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.CellPhone, "", new { @class = "text-danger" })<br />
+
+                    @Html.LabelFor(model => model.Email, htmlAttributes: new { @class = "control-label col-sm" })
+
+                    @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })<br />
+                </div>
+            </div>
+
+            <div class="listing" style="padding-left: 5%; padding-right: 5%">
+                <hr />
+                <div class="col-lg-11">
+
+                    @Html.LabelFor(model => model.StreetAddress, htmlAttributes: new { @class = "control-label col-sm" })
+
+                    @Html.EditorFor(model => model.StreetAddress, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.StreetAddress, "", new { @class = "text-danger" })<br />
+
+
+
+                    @Html.LabelFor(model => model.Municipality, htmlAttributes: new { @class = "control-label col-sm" })
+
+                    @Html.EditorFor(model => model.Municipality, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.Municipality, "", new { @class = "text-danger" })<br />
+
+
+
+                    @Html.LabelFor(model => model.PostalCode, htmlAttributes: new { @class = "control-label col-sm" })
+
+                    @Html.EditorFor(model => model.PostalCode, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.PostalCode, "", new { @class = "text-danger" })<br />
+
+
+                    @Html.LabelFor(model => model.CustomerProv, htmlAttributes: new { @class = "control-label col-sm" })
+
+                    @Html.EnumDropDownListFor(model => model.CustomerProv, htmlAttributes: new { @class = "form-control" })
+                    <small class="form-text text-muted control-label col-sm">
+                        *Only Applies to Canadian Residents,<br />
+                        Otherwise  Please Select Other
+                    </small>
+                    @Html.ValidationMessageFor(model => model.CustomerProv, "", new { @class = "text-danger" })<br />
+
+
+
+                    @Html.LabelFor(model => model.custCountry, htmlAttributes: new { @class = "control-label col-sm" })
+
+                    @Html.EnumDropDownListFor(model => model.custCountry, htmlAttributes: new { @class = "form-control" })
+                    @Html.ValidationMessageFor(model => model.custCountry, "", new { @class = "text-danger" })<br />
+
+                    @Html.LabelFor(model => model.CheckId, htmlAttributes: new { @class = "control-label col-sm" })
+                    @Html.EditorFor(model => model.CheckId, new { htmlAttributes = new { @class = "form-control"} }) <br />
+                    @Html.ValidationMessageFor(model => model.CheckId, "", new { @class = "text-danger" })
+
+
+
+                    @Html.Hidden(nameof(Model.isTrue), "true")<br />
+
+
+
+                    <input type="submit" value="Create" class="btn btn-success" />
+
+                </div>
+            </div>
+
+
+
+        </div>
+    </div>
+    <div class="text-center">
+        @Html.ActionLink("Back to List", "Index")
+    </div>
+</body>
+    <script src="~/Scripts/jquery-3.4.1.min.js"></script>
+    <script src="~/Scripts/jquery.validate.min.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <script src="~/Scripts/bootstrap-datepicker.min.js"></script>
+    <script src="~/Scripts/DatePickerReady.js"></script>
+}
+

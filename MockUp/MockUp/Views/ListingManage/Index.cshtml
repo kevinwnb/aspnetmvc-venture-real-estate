@@ -1,0 +1,118 @@
+﻿@model IEnumerable<MockUp.Models.Listing>
+
+@{
+    ViewBag.Title = "Listings";
+}
+
+<h3 class="text-center mb-4">Listings</h3>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.StreetAddress)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Municipality)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Province)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PostalCode)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SquareFeet)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Beds)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Baths)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CityArea)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Summary)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HeatingType)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HasFireplace)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HasGarage)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Price)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ContractSigned)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                <img src="@item.ImgPath" />
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.StreetAddress)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Municipality)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Province)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PostalCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SquareFeet)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Beds)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Baths)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CityArea)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Summary)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.HeatingType)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.HasFireplace)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.HasGarage)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Price)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ContractSigned)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.ListingId }) |
+                @Html.ActionLink("Details", "Details", new { id = item.ListingId }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.ListingId })
+            </td>
+        </tr>
+    }
+
+</table>

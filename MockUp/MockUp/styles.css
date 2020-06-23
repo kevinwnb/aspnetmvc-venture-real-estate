@@ -1,0 +1,147 @@
+﻿* {
+    margin: 0px;
+    padding: 0px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
+
+.navitop {
+    width: 100%;
+    margin: 0 auto;
+    background-color: #2a224a; /*rgb(65,154,28)*/
+}
+
+    .navitop .regularMenu {
+        display: inline-block;
+    }
+
+    .navitop .menuBtn {
+        display: none;
+    }
+
+    .navitop a {
+        text-decoration: none;
+        display: inline-block;
+        padding: 10px;
+        color: rgba(255,255,255,0.7);
+        line-height: normal;
+    }
+
+        .navitop a:hover {
+            color: white;
+            text-decoration: none;
+            background-color: rgba(255,255,255,0.2);
+        }
+
+        .navitop a.active {
+            background-color: salmon;
+            color: #3C3C3C;
+        }
+
+        .navitop a.createListing {
+            float: right;
+            background-color: rgba(255,255,255,0.4);
+        }
+
+    .navitop .submenu {
+        display: none;
+        position: absolute;
+        background-color: #3C3C3C;
+        padding: 10px;
+    }
+
+        .navitop .submenu a {
+            display: block;
+        }
+
+
+/* The sidenav */
+.sidenav {
+    height: 100%;
+    width: 200px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    padding-top: 20px;
+}
+
+/* Page content */
+.main {
+    margin-left: 200px; /* Same as the width of the sidenav */
+    padding: 50px;
+}
+
+.sidenav .sidenavLink {
+    display: block;
+    color: white;
+    padding: 5px;
+}
+
+.sidenav .sidenavLink:hover {
+    background-color: rgba(255,255,255,0.3);
+}
+
+
+
+
+
+.wrapper {
+    width: 100%;
+    background-color: #3C3C3C;
+    min-height: 400px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    border-left: 10px solid white;
+    border-right: 10px solid white;
+}
+
+    .wrapper .listing {
+        width: auto;
+        background-color: lightblue;
+        padding: 10px;
+        margin: 5px;
+    }
+
+        .wrapper .listing img {
+            display: block;
+            width: 100%;
+        }
+
+/* customize bootstrap button */
+.btn-lila {
+    background-color: #3c2c7c;
+    color: white;
+}
+
+    .btn-lila:hover {
+        background-color: #2a224a;
+        color: white;
+    }
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 825px) {
+    .wrapper {
+        width: 80%;
+    }
+
+    .navitop div.percent80 {
+        width: 80%;
+        margin: 0 auto;
+    }
+}
+
+@media only screen and (max-width: 620px) {
+    .navitop .menuBtn {
+        display: inline-block;
+    }
+
+    .navitop .regularMenu {
+        display: none;
+    }
+}

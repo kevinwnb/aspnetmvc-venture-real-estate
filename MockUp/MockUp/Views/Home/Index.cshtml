@@ -1,0 +1,306 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<body>
+    <section id="background-video">
+        <div id="mainvideo" style="background-color: #2a224a;">
+            <div id="content" style="width: 100%; height: 100%; position: absolute;" class="text-center">
+                <div style="position: relative; top: 50%; transform: translateY(-50%);">
+                    <img style="display: none; opacity: 0.8;" class="d-md-inline" src="~/images/VentureRealEstate.png" height="200" width="200" />
+                    <h3 class="mb-0" style="display: inline-block; padding: 10px; border-radius: 10px; background-color: rgba(255,255,255,0.9); color: rgba(0,0,0,0.5); font-size: 2vw;">
+                        Call Us at <b>506-9490-819</b>
+                    </h3>
+                    <h1 id="title" style="font-size: 4vw; color: rgba(255,255,255,0.8);">Guiding you in the right direction</h1>
+                </div>
+            </div>
+            <!-- The video -->
+            <video width="100%" height="100%" onloadeddata="setContainerHeight()" autoplay muted loop id="myVideo" style="display: block; max-width: 100%; height: auto;">
+                <source src="~/assets/videos/cityclip.mp4" type="video/mp4">
+            </video>
+            <script>
+                function setContainerHeight() {
+                    var height = document.getElementById("myVideo").offsetHeight;
+                    document.querySelector("#mainvideo #content").style.height = height + "px";
+                }
+                $(window).resize(setContainerHeight);
+            </script>
+        </div>
+    </section>
+
+    <section id="why-us">
+        <div style="padding: 50px 0 50px 0; background-color: #E1E1E1;">
+            <div class="container">
+                <h3 class="text-center">Why Us</h3>
+                <p class="text-center py-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus in porta ex, at laoreet enim. Vivamus eu congue magna. Nulla facilisi.</p>
+                <div class="row">
+                    <div class="col-lg-4 mb-sm-2">
+                        <div class="card text-center p-5 h-100 card-hover">
+                            <div>
+                                <i class="far fa-clock fa-2x text-center"></i>
+                            </div>
+
+                            <h4 class="card-title text-center mt-5 font-weight-bold ">
+                                FLEXIBLE HOURS FOR VIEWING
+                            </h4>
+                            <div class="card-body">
+                                <p class="card-text text-muted">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                    Veritatis incidunt atque quia nostrum reiciendis adipisci.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 mb-sm-2">
+                        <div class="card text-center p-5 h-100 card-hover">
+                            <div>
+                                <i class="fas fa-star fa-2x text-center "></i>
+                            </div>
+
+                            <h4 class="card-title text-center mt-5 font-weight-bold pb-4">
+                                20 YEARS OF EXPERIENCE
+                            </h4>
+                            <div class="card-body">
+                                <p class="card-text text-muted">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                    Animi, tempora esse! Provident laboriosam nihil laborum!
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 mb-sm-2">
+                        <div class="card text-center p-5 h-100 card-hover">
+                            <div>
+                                <i class="far fa-edit fa-2x text-center"></i>
+                            </div>
+                            <h4 class="card-title text-center mt-5 font-weight-bold ">
+                                FREE REGISTRATION
+                            </h4>
+                            <div class="card-body">
+                                <p class="card-text text-muted">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                    Dolorum, harum? Voluptates sint deleniti nulla voluptas?
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="latest-listings">
+        <div style="background-color: white;">
+            <div class="container">
+                <h3 class="text-center" style="padding: 50px;">Latest listings</h3>
+                <div class="owl-carousel owl-theme">
+                    <div class="item">
+                        <div class="card" style="width: 18rem;">
+                            <img class="card-img-top" src="~/assets/images/houselisting1.jpg" alt="Card image cap">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">Single-Family Home</h5>
+                                <div class="text-center card-text">
+                                    <h2>$400,000</h2>
+                                    <p>2400 Sq.Ft &bull; 4 Beds &bull; 2 Baths</p>
+                                    <p style="color: teal">200 Main St. Toronto, ON</p>
+                                </div>
+                                <a href="#" class="btn btn-lila">VIEW LISTING</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="card" style="width: 18rem;">
+                            <img class="card-img-top" src="~/assets/images/houselisting2.jpg" alt="Card image cap">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">Single-Family Home</h5>
+                                <div class="text-center card-text">
+                                    <h2>$340,000</h2>
+                                    <p>1900 Sq.Ft &bull; 3 Beds &bull; 2 Baths</p>
+                                    <p style="color: teal">200 Main St. London, ON</p>
+                                </div>
+                                <a href="#" class="btn btn-lila">VIEW LISTING</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="card" style="width: 18rem;">
+                            <img class="card-img-top" src="~/assets/images/houselisting3.jpg" alt="Card image cap">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">Single-Family Home</h5>
+                                <div class="text-center card-text">
+                                    <h2>$290,000</h2>
+                                    <p>2100 Sq.Ft &bull; 3 Beds &bull; 3 Baths</p>
+                                    <p style="color: teal">200 Main St. Woodstock, NB</p>
+                                </div>
+                                <a href="#" class="btn btn-lila">VIEW LISTING</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="card" style=" width: 18rem;">
+                            <img class="card-img-top" src="~/assets/images/houselisting4.jpg" alt="Card image cap">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">Condo</h5>
+                                <div class="text-center card-text">
+                                    <h2>$360,000</h2>
+                                    <p>2200 Sq.Ft &bull; 4 Beds &bull; 3 Baths</p>
+                                    <p style="color: teal">200 Main St. Vancouver, BC</p>
+                                </div>
+                                <a href="#" class="btn btn-lila">VIEW LISTING</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div style="padding: 50px; text-align: center;">
+                    <a href="javascript:void(0)" class="btn btn-lila" style="padding: 20px;">VIEW MORE</a>
+                </div>
+                <script>
+                    $(document).ready(function () {
+
+                        $('.owl-carousel').owlCarousel({
+                            margin: 10,
+                            loop: false,
+                            autoWidth: true,
+                            dots: true,
+                            items: 3
+                        });
+
+                    });
+                </script>
+            </div>
+        </div>
+    </section>
+
+    <section id="testimonials">
+        <div style="width: 100%; height: 100vh; background-color: #E1E1E1;">
+            <div class="row align-items-center justify-content-center mx-0" style="width: 100%; height: 100%;">
+                <div class="w-100">
+                    <div class="container">
+                        <h3 class="py-5 text-center" style="color: black;">Testimonials</h3>
+                        <div class="owl-carousel owl-theme">
+                            <div class="item">
+                                <div class="card card-hover text-center text-dark" style="max-width: 18rem; background-color: transparent;">
+                                    <div class="card-body">
+                                        <p class="card-text">
+                                            <i class="fa fa-quote-right fa-2x"></i>
+                                        </p>
+                                        <p class="card-text">
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                            Veritatis incidunt atque quia nostrum reiciendis adipisci.
+                                        </p>
+                                        <h3 class="card-text">
+                                            - Paul Weidner
+                                        </h3>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="card card-hover text-center text-dark" style="max-width: 18rem; background-color: transparent;">
+                                    <div class="card-body">
+                                        <p class="card-text">
+                                            <i class="fa fa-quote-right fa-2x"></i>
+                                        </p>
+                                        <p class="card-text">
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                            Veritatis incidunt atque quia nostrum reiciendis adipisci.
+                                        </p>
+                                        <h3 class="card-text">
+                                            - Monica Leblanc
+                                        </h3>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="card card-hover text-center text-dark" style="max-width: 18rem; background-color: transparent;">
+                                    <div class="card-body">
+                                        <p class="card-text">
+                                            <i class="fa fa-quote-right fa-2x"></i>
+                                        </p>
+                                        <p class="card-text">
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                            Veritatis incidunt atque quia nostrum reiciendis adipisci.
+                                        </p>
+                                        <h3 class="card-text">
+                                            - Frank Smith
+                                        </h3>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="card card-hover text-center text-dark" style="max-width: 18rem; background-color: transparent;">
+                                    <div class="card-body">
+                                        <p class="card-text">
+                                            <i class="fa fa-quote-right fa-2x"></i>
+                                        </p>
+                                        <p class="card-text">
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                            Veritatis incidunt atque quia nostrum reiciendis adipisci.
+                                        </p>
+                                        <h3 class="card-text">
+                                            - Mark Klause
+                                        </h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+            $(document).ready(function () {
+
+                $('.owl-carousel').owlCarousel({
+                    margin: 10,
+                    loop: false,
+                    autoWidth: true,
+                    dots: true,
+                    items: 3
+                });
+
+            });
+        </script>
+    </section>
+
+    <section id="lets-talk">
+        <div style="background-image: url(../../assets/images/readytobuybg.jpg); background-position: center; background-size: cover; background-repeat: no-repeat; width: 100%; height: 100vh; background-color: #E1E1E1;">
+            <div class="row align-items-center justify-content-center mx-0" style="width: 100%; height: 100%;">
+                <div class="text-center" style="background-color: rgba(0,0,0,0.5); width: 100%; padding: 50px 0 50px 0;">
+                    <h1 style="color: white;">Let's Talk</h1>
+                    <p class="mx-auto" style="margin-top: 25px; color: white; width: 60%;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus in porta ex, at laoreet enim. Vivamus eu congue magna. Nulla facilisi. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
+                    <a class="btn btn-lila" style="margin-top: 25px;" href="javascript:void(0)">Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    @*<div class="bg">
+            <img src="~/images/VentureRealEstate.png" height="200" width="200" />
+
+            <div class="badge"><h3>Call Us at 506-9490-819</h3></div>
+            <div class="text-center">
+                <h1 id="title">Guiding you in the right direction</h1>
+            </div>
+            <div class="containerCard">
+
+
+
+                <div class="card" style="width: 48rem;">
+                    <div class="card-header">
+                        Request more information
+                    </div>
+
+                    <label for="exampleInputEmail1">Email address</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                    <div class="form-group">
+                        <label for="exampleFormControlTextarea1">Questions:</label>
+                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+            </div>
+        </div>*@
+
+</body>

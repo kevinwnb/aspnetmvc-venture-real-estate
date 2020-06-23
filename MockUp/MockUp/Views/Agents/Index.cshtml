@@ -1,0 +1,105 @@
+﻿@model IEnumerable<MockUp.Models.Agent>
+
+@{
+    ViewBag.Title = "Agents";
+}
+
+<h3 class="text-center mb-4">Agents</h3>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.SIN)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FirstName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MiddleName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LoggedInUserName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.StreetAddress)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Municipality)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Province)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PostalCode)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HomePhoneNumber)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CellPhoneNumber)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OfficeEmail)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OfficePhoneNumber)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DateOfBirth)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.SIN)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FirstName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MiddleName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LoggedInUserName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.StreetAddress)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Municipality)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Province)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PostalCode)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HomePhoneNumber)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CellPhoneNumber)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.OfficeEmail)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.OfficePhoneNumber)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DateOfBirth)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.AgentId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.AgentId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.AgentId })
+        </td>
+    </tr>
+}
+
+</table>

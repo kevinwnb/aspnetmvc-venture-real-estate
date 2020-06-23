@@ -1,0 +1,124 @@
+﻿@model MockUp.Models.Agent
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<h3>Logged in as: John Doe</h3>
+
+<div>
+    <h4>Agent</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.SIN)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SIN)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FirstName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FirstName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MiddleName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MiddleName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LoggedInUserName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LoggedInUserName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.StreetAddress)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.StreetAddress)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Municipality)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Municipality)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Province)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Province)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PostalCode)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PostalCode)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HomePhoneNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HomePhoneNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CellPhoneNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CellPhoneNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OfficeEmail)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OfficeEmail)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OfficePhoneNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OfficePhoneNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DateOfBirth)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DateOfBirth)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.AgentID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
